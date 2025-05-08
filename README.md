@@ -1,36 +1,23 @@
-# UDP-Chat-Application
+# UDP Chat Application (Python)
+
 This is a lightweight, command-line, peer-to-peer chat application built using Python sockets and UDP. It enables two users to communicate over the network by sending and receiving JSON-formatted messages with sequence tracking for basic message ordering.
 
-Features
--Peer-to-peer communication over UDP
--Threaded message receiving
--Basic message ordering using sequence numbers
--Simple JSON message structure
--Lightweight and easy to use
+## Features
 
-Requirements
--Python 3.x
+- Peer-to-peer communication over UDP  
+- Threaded message receiving  
+- Basic message ordering using sequence numbers  
+- Simple JSON message structure  
+- Lightweight and easy to use  
 
-Usage
-Open two terminal windows (or run on two machines). In each, start the script with:
-  python chatP4.py <username> <destination_ip:port> <host_ip:port>
+## Requirements
 
-Example (Local Test)
-Terminal 1:
-  python chatP4.py user1 127.0.0.1:3001 127.0.0.1:2000
-Terminal 2:
-  python chatP4.py user2 127.0.0.1:2000 127.0.0.1:3001
+- Python 3.x
 
-Message Format
-Messages are sent as JSON and include:
--Version: Protocol version (currently "v1")
--Seq. num: Sequence number of the message
--UID: User ID (username)
--DID: Destination ID (IP:port)
--Message: The actual message content
+## Installation
 
-Limitations
--Only supports direct communication between two peers
--No encryption or authentication
--No message retries or acknowledgments
+Clone the repository:
 
+```bash
+git clone https://github.com/your-username/udp-chat-app.git
+cd udp-chat-app
